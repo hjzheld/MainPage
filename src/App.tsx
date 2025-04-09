@@ -13,7 +13,7 @@ function App() {
     })
 
     return (
-        <Router>
+        <Router basename="/MainPage">
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/project/:id" element={<Detail />} />

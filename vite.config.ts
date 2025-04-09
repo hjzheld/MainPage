@@ -3,17 +3,24 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import { resolve } from 'path'
 
-// ESM 방식으로 __dirname 흉내내기
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/MainPage/',
   plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      }
     }
   }
 })
