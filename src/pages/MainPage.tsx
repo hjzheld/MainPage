@@ -193,7 +193,7 @@ const MainPage = () => {
 
     return (
     <Container>
-        <Title page="main" title="포토폴리오" />
+        <Title page="main" title="포트폴리오" />
         <Category key={selectedTab}>
             {categories.map((tab) => (
                 <Btn.CategoryBtn 
