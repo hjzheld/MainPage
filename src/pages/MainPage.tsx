@@ -194,7 +194,7 @@ const MainPage = () => {
     return (
     <Container>
         <Title page="main" title="포토폴리오" />
-        <Category>
+        <Category key={selectedTab}>
             {categories.map((tab) => (
                 <Btn.CategoryBtn 
                     key= { tab.type }

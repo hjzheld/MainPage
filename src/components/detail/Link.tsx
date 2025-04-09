@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 const MainTitle = styled.div`
   font-size: 1.5rem;
@@ -6,7 +7,7 @@ const MainTitle = styled.div`
   margin-top: 1rem;
 `;
 
-const LinkText = styled.p`
+const LinkText = styled(motion.p)`
   font-size: 1rem;
   margin-top: 0.6rem;
   cursor: pointer;
@@ -21,14 +22,26 @@ const Link = ({ title, links }: LinkProps) => {
   const renderLinks = () => {
     if (typeof links === "string") {
       return (
-        <LinkText onClick={() => window.open(links, "_blank")}>
+        <LinkText 
+        onClick={() => window.open(links, "_blank")}
+        whileHover={{
+            color: 'var(--primary-color)',
+            transition: { duration: 0.3 }
+        }}>
           ▶️ {links}
         </LinkText>
       );
     }
 
     return links.map((link, idx) => (
-      <LinkText key={idx} onClick={() => window.open(link, "_blank")}>
+      <LinkText 
+      key={idx} 
+      onClick={() => window.open(link, "_blank")}
+      whileHover={{
+        color: 'var(--primary-color)',
+        transition: { duration: 0.3 }
+      }}
+      >
         ▶️ {link}
       </LinkText>
     ));
