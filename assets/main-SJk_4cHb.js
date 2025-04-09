@@ -161,7 +161,7 @@ Please change the parent <Route path="${V}"> to <Route path="${V==="/"?"*":`${V}
     display: flex;
     justify-content: center;
     gap: 3rem;
-`,CC=()=>{const n=qf(),[i,r]=C.useState("all"),[s,o]=C.useState(null),f=DC.filter(h=>i=="all"?!0:!(i!==h.mainTab||s&&s!==h.subTab));return F.jsxs(q0,{children:[F.jsx(lv,{page:"main",title:"포토폴리오"}),F.jsx(MC,{children:m0.map(h=>F.jsx(Vf.CategoryBtn,{tab:h,active:i==h.type,onClick:()=>{r(h.type),o(null)}},h.type))},i),m0.map(h=>F.jsx(Vf.SubCategory,{tab:h,active:i==h.type,selectedSub:s??void 0,onClick:m=>{m&&o(m.type)}},h.type)),F.jsx("div",{className:"card-container",children:f.map(h=>F.jsx(SC,{project:h,onClick:()=>{localStorage.setItem("project",JSON.stringify(h)),n(`/project/${h.id}`)}},h.id))})]})},wC=ve.div`
+`,CC=()=>{const n=qf(),[i,r]=C.useState("all"),[s,o]=C.useState(null),f=DC.filter(h=>i=="all"?!0:!(i!==h.mainTab||s&&s!==h.subTab));return F.jsxs(q0,{children:[F.jsx(lv,{page:"main",title:"포트폴리오"}),F.jsx(MC,{children:m0.map(h=>F.jsx(Vf.CategoryBtn,{tab:h,active:i==h.type,onClick:()=>{r(h.type),o(null)}},h.type))},i),m0.map(h=>F.jsx(Vf.SubCategory,{tab:h,active:i==h.type,selectedSub:s??void 0,onClick:m=>{m&&o(m.type)}},h.type)),F.jsx("div",{className:"card-container",children:f.map(h=>F.jsx(SC,{project:h,onClick:()=>{localStorage.setItem("project",JSON.stringify(h)),n(`/project/${h.id}`)}},h.id))})]})},wC=ve.div`
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1rem;
