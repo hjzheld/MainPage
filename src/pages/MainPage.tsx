@@ -146,7 +146,7 @@ const MainPage = () => {
             <Btn.SubCategory 
                 tab = { tab } 
                 active = { selectedTab == tab.type }
-                selectedSub={ selectedSub }
+                selectedSub={selectedSub ?? undefined}
                 onClick = {(subTitle?: SubCategory) => {
                     if (subTitle) {
                       setSub(subTitle.type);
