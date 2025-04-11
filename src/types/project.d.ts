@@ -35,5 +35,4 @@ type MediaItem = {
 interface ImageProps {
     images: MediaItem[];
     onClick?: () => void;
-    style?: React.CSSProperties;
 };

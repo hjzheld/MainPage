@@ -12,7 +12,7 @@ import Zoom from 'react-medium-image-zoom'
 import rightArrow from '@/assets/images/common/left-arrow.png';
 import leftArrow from '@/assets/images/common/right-arrow.png';
 
-const SwiperImage = ({ images, onClick, style }: ImageProps) => {
+const SwiperImage = ({ images, onClick }: ImageProps) => {
   const prevRef = useRef<HTMLImageElement>(null);
   const nextRef = useRef<HTMLImageElement>(null);
 
@@ -53,23 +53,11 @@ const SwiperImage = ({ images, onClick, style }: ImageProps) => {
       >
         {images.map((img, idx) => (
           <SwiperSlide key={idx}>
-              { style ? (
-              <div style={style}>
-                <Zoom>
-                  <img
-                    src={img.src}
-                    alt="project image"
-                    onClick={onClick}
-                  />
-                </Zoom>
-              </div>
-            ) : (
-              <img
-                src={img.src}
-                alt="project image"
-                onClick={onClick}
-              />
-            )}
+            <img
+              src={img.src}
+              alt="project image"
+              onClick={onClick}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

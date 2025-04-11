@@ -70,14 +70,6 @@ const DetailPage = () => {
                               
                         }
                         </div>
-                        {isImageOpen && (
-                            <div 
-                                className="image-modal"
-                            >   
-                                <SwiperImage images={ project.detail.image } style={{ maxWidth: '90%', maxHeight: '100%', display: 'flex', justifyContent: 'center'}}/>   
-                                <Btn.CloseBtn onClick={ () => setIsImageOpen(false)}/>
-                            </div>
-                            )}
                         <div className="detail-content">
                             <h4>{ project.content }</h4>
                             <p className='detail-sub-content' dangerouslySetInnerHTML={{ __html: project.detail.content }} />
@@ -135,6 +127,14 @@ const DetailPage = () => {
                         </div>
                     </div>
                 </div>
+                {isImageOpen && (
+                <div 
+                    className="image-modal"
+                >   
+                    <SwiperImage images={ project.detail.image }/>   
+                    <Btn.CloseBtn onClick={ () => setIsImageOpen(false)}/>
+                </div>
+                )}
                 </>
             ) : (
                 <p>프로젝트 정보를 불러오는 중...</p>
