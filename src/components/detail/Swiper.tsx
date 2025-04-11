@@ -53,11 +53,13 @@ const SwiperImage = ({ images, onClick }: ImageProps) => {
       >
         {images.map((img, idx) => (
           <SwiperSlide key={idx}>
-            <img
-              src={img.src}
-              alt="project image"
-              onClick={onClick}
-            />
+              <Zoom>
+                <img
+                  src={img.src}
+                  alt="project image"
+                  onClick={onClick}
+                />
+              </Zoom>
           </SwiperSlide>
         ))}
       </Swiper>
