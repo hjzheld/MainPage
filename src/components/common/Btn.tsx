@@ -38,6 +38,7 @@ const CategoryBtn = ({ tab, active, onClick }: BtnNameProps) => {
       animate={{ borderColor: active ? 'var(--primary-color)' : 'var(--gray-200)' }}
       whileHover={{
         borderColor: 'var(--primary-color)',
+        scale: 1.05,
         transition: { duration: 0.3 }
       }}
       whileTap={{
@@ -83,6 +84,7 @@ const SubCategory = ({ tab, active, selectedSub, onClick }: SubBtnProps) => {
               whileHover={{
                 borderBottom: '2px solid',
                 borderColor: 'var(--primary-color)',
+                scale: 1.05,
                 transition: { duration: 0.3 }
               }}
               whileTap={{

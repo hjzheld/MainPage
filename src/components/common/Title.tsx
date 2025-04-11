@@ -27,6 +27,12 @@ const TitleStyle = styled.div<{ page?: string }>`
             width: 30px;
             height: auto;
             cursor: pointer;
+
+            transition: transform 0.3s ease; 
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 `
@@ -39,7 +45,7 @@ const Title = ( {title, page }: TitleProps) => {
             {page === 'detail' ? (
                 <>
                 <div className="back-btn">
-                    <img src={backIcon} alt="뒤로가기" onClick={() => navigate(-1)}/>
+                    <img src={backIcon} alt="뒤로가기 버튼" onClick={() => navigate(-1)}/>
                     {title}
                 </div>
                 </>

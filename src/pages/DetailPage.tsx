@@ -3,34 +3,12 @@ import Btn from '@/components/common/Btn';
 import Link from '@/components/detail/Link'
 import Title from '@/components/common/Title'
 import Container from '@/components/common/Container'
+import SwiperImage from '@/components/detail/Swiper'
+import Thumbnail from '@/assets/images/detail/video_thumb.png'
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-
-interface Projects {
-    id: number,
-    title: string,
-    content: string,
-    mainTab:  'front' | 'back',
-    subTab: 'vue' | 'react' | 'fastapi' | 'django',
-    tags: string[],
-    detail: Detail
-}
-
-interface Detail {
-    github?: string,
-    notion?: string,
-    blog?: string[],
-    content: string,
-    image: any,
-    stack: Stack
-}
-interface Stack {
-    back?: string[],
-    front?: string[],
-    database?: string[],
-    ai?: string[],
-}
+import { Projects } from '@/types/project';
 
 const MainTitle = styled.div`
     font-size: 1.5rem;
@@ -71,32 +49,53 @@ const DetailPage = () => {
         <Container>
             {project ? (
                 <>
-                <div className="detail-container">
+                <div 
+                className="detail-container" 
+                data-aos="zoom-in-right"
+                >
                     <Title page="detail" title={ project.title } />
                     <div className="detail-content-container">
-                        <motion.img 
-                        src={project.detail.image} 
-                        alt="프로젝트 이미지"
-                        onClick={() => setIsImageOpen(true)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        />
+                        <div className="detail-img-container">
+                        {
+                            project.detail.image.length == 1 ? 
+                            <motion.img 
+                            src={project.detail.image[0].src} 
+                            alt="프로젝트 이미지"
+                            onClick={() => setIsImageOpen(true)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            />
+                            : 
+                            <SwiperImage images={ project.detail.image } onClick={() => setIsImageOpen(true)}/>   
+                              
+                        }
+                        </div>
                         {isImageOpen && (
                             <div 
                                 className="image-modal"
-                                onClick={() => setIsImageOpen(false)}
                             >   
-                                <img 
-                                src={project.detail.image} 
-                                alt="enlarged project"
-                                style={{ maxWidth: '90%', maxHeight: '100%', borderRadius: '10px' }}
-                                />
+                                <SwiperImage images={ project.detail.image } style={{ maxWidth: '90%', maxHeight: '100%', display: 'flex', justifyContent: 'center'}}/>   
                                 <Btn.CloseBtn onClick={ () => setIsImageOpen(false)}/>
                             </div>
                             )}
                         <div className="detail-content">
                             <h4>{ project.content }</h4>
                             <p className='detail-sub-content' dangerouslySetInnerHTML={{ __html: project.detail.content }} />
+                            { project.detail.video? (
+                                <div className="video-wrap">
+                                    <video
+                                    src={project.detail.video}
+                                    poster={Thumbnail}
+                                    autoPlay     
+                                    playsInline               
+                                    controls
+                                    muted       
+                                    aria-label="시연영상"               
+                                    />
+                                </div>
+                                ) : null
+                            }
+                            
 
                             {project.detail.github && (
                             <Link title="GitHub" links={project.detail.github} />
@@ -104,6 +103,10 @@ const DetailPage = () => {
                             
                             {project.detail.notion && (
                             <Link title="Notion" links={project.detail.notion} />
+                            )}
+
+                            {project.detail.notion && (
+                            <Link title="시연영상" links={project.detail.notion} />
                             )}
                             
                             {project.detail.blog && project.detail.blog.length > 0 && (

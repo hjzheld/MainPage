@@ -6,7 +6,7 @@ const Container = styled.div`
     min-height: 100vh;
     background-color: var(--main-background);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.2rem 2rem;
 `
 
 export default Container
