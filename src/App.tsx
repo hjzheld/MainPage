@@ -1,6 +1,7 @@
 import '@/assets/scss/index.scss';
 import Main from "@/pages/MainPage"
 import Detail from "@/pages/DetailPage"
+import Test from "@/pages/Test"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -41,6 +42,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/project/:id" element={<Detail />} />
+                <Route path="/test" element={<Test />} />
             </Routes>
         </Router>
     )
