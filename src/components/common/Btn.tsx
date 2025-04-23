@@ -110,11 +110,11 @@ const CloseBtnStyle = styled(motion.button)`
   border-radius: 50px;
   border: 3px solid;
   border-color: var(--gray-200);
-  background: 'transparent';
-  color: var(--gray-100)');
+  background: transparent;
+  color: var(--gray-100);
   font-weight: 400;
   cursor: pointer;
-`
+`;
 
 const CloseBtn = ({ onClick }: CloseBtnProps) => {
   return (
@@ -133,5 +133,7 @@ const CloseBtn = ({ onClick }: CloseBtnProps) => {
     </CloseBtnStyle>
   )
 }
+
+
 
 export default { CategoryBtn, SubCategory, CloseBtn };
