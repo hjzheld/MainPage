@@ -155,8 +155,8 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
   border-radius: 50px;
   border: 3px solid;
   border-color: var(--gray-200);
-  background: 'transparent';
-  color: var(--gray-100)');
+  background: transparent;
+  color: var(--gray-100);
   font-weight: 400;
   cursor: pointer;
 `,YO=({onClick:t})=>ae.jsx(qO,{onClick:()=>t(),whileHover:{borderColor:"var(--primary-color)",background:"var(--primary-color)",transition:{duration:.1}},whileTap:{scale:.95},children:"Close"}),md={CategoryBtn:HO,SubCategory:kO,CloseBtn:YO},zf="/MainPage/assets/yamiyagi-YZU8s5Rh.png",XO="/MainPage/assets/hojin_main-DctrGh5X.png",$O="/MainPage/assets/hojin_detail-DNvwE2_Y.png",IO="/MainPage/assets/hojin_video-C1LpzS2j.mp4",ZO=[{id:1,title:"야미야기",content:"아이들의 상상력으로 만들어지는 동화 웹사이트",mainTab:"back",subTab:"django",tags:["Python","Django","PostgreSQL"],detail:{notion:"https://www.notion.so/teamsparta/IAM-8ad9729b3dfb42e3a25c72c22106a72a",notion_vedio:"https://teamsparta.notion.site/7a49bd323df7456ebd58e9bb32360a8d",blog:[],content:`
