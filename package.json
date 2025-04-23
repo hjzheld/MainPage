@@ -33,6 +33,7 @@
     "@types/swiper": "^6.0.0",
     "@types/video.js": "^7.3.58",
     "@vitejs/plugin-react": "^4.3.4",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
