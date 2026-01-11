@@ -1013,7 +1013,7 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
             매일 네이버 뉴스 연애 기사 랭킹 4위까지 가져오는 크롤링 프로젝트입니다. 
             <br/> 이 프로젝트에서 저는 프론트엔드 개발을 맡았으며, 백엔드는 Django로 구현했습니다. 
             <br/> Django 템플릿을 Vue로 빌드한 페이지로 연동하여 프론트와 백엔드를 효과적으로 연결했습니다.
-            `,video:X5,image:[{type:"image",src:H5},{type:"image",src:k5}],stack:{back:["Python","Django","DRF(Django REST Framework)","Selenium"],front:["Vue","Vite","JavaScript","CSS3"],database:["supabase","postgreSQL"],build:["Render"]}}},{id:4,title:"포트폴리오",content:"자기소개 및 프로젝트를 소개하는 사이트",mainTab:"front",subTab:"react",tags:["React","Vite","TypeScript"],detail:{github:"https://github.com/hjzheld/MainPage",blog:[],content:`
+            `,video:X5,image:[{type:"image",src:H5},{type:"image",src:k5}],stack:{back:["Python","Django","DRF(Django REST Framework)","Selenium"],front:["Vue","Vite","JavaScript","CSS3"],database:["supabase","postgreSQL"],build:["Render"]}}},{id:4,title:"포트폴리오",content:"자기소개 및 프로젝트를 소개하는 사이트",mainTab:"front",subTab:"react",tags:["React","Vite","TypeScript"],detail:{github:"https://github.com/hjzheld",blog:[],content:`
             리액트로 만든 프로젝트입니다.
             <br /> 자기 소개 및 그동안의 경력, 학력과 프로젝트 기록을 확인할 수 있습니다.
             <br /> 특히 경력에서 자세하게 어떤 업무를 맡았고, 어떤 성장으로 했는지 확인할 수 있습니다.
