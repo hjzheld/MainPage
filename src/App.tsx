@@ -46,7 +46,7 @@ function AppContent() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/MainPage/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<MainPage />} />
           <Route path="/project" element={<PortfolioPage />} />
           <Route path="/project/:id" element={<Detail />} />
