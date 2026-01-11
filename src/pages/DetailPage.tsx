@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Btn from '@/components/common/Btn';
 import Link from '@/components/detail/Link'
-import Title from '@/components/common/Title'
+import { Title } from '@/components/common/Title'
 import Container from '@/components/common/Container'
 import SwiperImage from '@/components/detail/Swiper'
 import Thumbnail from '@/assets/images/detail/video_thumb.png'

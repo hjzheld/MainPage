@@ -244,7 +244,7 @@ export const PersonalHistory = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                {personal.map((pers, index) =>
+                {personal.map((pers) =>
                     <HistoryCard 
                         key={pers.id}
                         variants={cardVariants}
