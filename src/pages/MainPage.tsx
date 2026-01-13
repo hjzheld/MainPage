@@ -22,6 +22,10 @@ const EffectContainer = styled.div`
 const ButtonContainer = styled(motion.div)`
     display: flex;
     gap: 1.2rem;    
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    } 
 `
 
 
@@ -45,7 +49,7 @@ const MainPage = () => {
                     duration: 1.2,
                     scale: { type: "spring", visualDuration: 0.8, bounce: 0.5 },
                 }}>
-                    <Btn.GradientBtn onClick={() => navigate(`/project`)}>
+                    <Btn.GradientBtn onClick={() => navigate(`/MainPage/project`)}>
                         프로젝트 페이지 ▶
                     </Btn.GradientBtn>
                     <Btn.GradientBtn onClick={() => window.open("https://github.com/hjzheld", "_blank")}>

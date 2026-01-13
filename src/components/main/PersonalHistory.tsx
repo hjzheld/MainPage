@@ -45,6 +45,14 @@ const CompanyTitle = styled.h3`
     font-weight: 700;
     margin: 0;
     color: var(--gray-100);
+
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    } 
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+    } 
 `;
 
 const DateText = styled.h4`
@@ -115,6 +123,10 @@ const SkillList = styled(motion.ul)`
         }
     }
 `;
+
+const isKakaoInApp = /KAKAOTALK/i.test(navigator.userAgent);
+
+
 
 export const PersonalHistory = () => {
     const personal = [
@@ -239,10 +251,10 @@ export const PersonalHistory = () => {
         <div>
             <SubTitle title="경력"/>
             <CardsGrid
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+            variants={containerVariants}
+            initial="hidden"
+            animate={isKakaoInApp ? "visible" : undefined}
+            whileInView={!isKakaoInApp ? "visible" : undefined}
             >
                 {personal.map((pers) =>
                     <HistoryCard 

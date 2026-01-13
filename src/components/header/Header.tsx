@@ -39,7 +39,7 @@ const Nav = styled.nav<{ open?: boolean }>`
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(223, 223, 223, 0.9);
+    background: rgba(223, 223, 223, 1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-direction: column;

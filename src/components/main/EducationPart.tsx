@@ -20,7 +20,6 @@ const CardsGrid = styled(motion.div)`
 const EducationCard = styled(motion.div)`
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--gray-100);
     display: flex;
     flex-direction: column;
@@ -42,6 +41,14 @@ const SchoolTitle = styled(motion.h3)`
     font-weight: 700;
     margin: 0;
     color: var(--gray-100);
+
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    } 
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const DateText = styled(motion.h4)`
@@ -49,6 +56,11 @@ const DateText = styled(motion.h4)`
     font-weight: 500;
     margin: 0;
     color: var(--gray-400);
+
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
+    }
 `;
 
 const MajorText = styled(motion.p)`
@@ -57,6 +69,11 @@ const MajorText = styled(motion.p)`
     margin: 0;
     color: var(--gray-100);
     padding-top: 0.5rem;
+
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
 `;
 
 export const EducationPart = () => {

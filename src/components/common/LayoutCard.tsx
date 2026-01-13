@@ -26,6 +26,14 @@ const CardTitle = styled.h3`
     margin: 0;
     z-index: 1;
     color: var(--gray-400);
+
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    } 
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+    } 
 `;
 
 

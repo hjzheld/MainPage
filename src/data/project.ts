@@ -94,7 +94,7 @@ const projects: Projects[] = [
         subTab: 'react',
         tags: ['React', 'Vite', 'TypeScript'],
         detail: {
-            github: 'https://github.com/hjzheld',
+            github: 'https://github.com/hjzheld/MainPage',
             blog: [],
             content: `
             리액트로 만든 프로젝트입니다.
