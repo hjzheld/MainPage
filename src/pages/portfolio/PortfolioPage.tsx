@@ -199,7 +199,7 @@ const MainPage = () => {
                         project={project} 
                         onClick={() => {
                             localStorage.setItem('project', JSON.stringify(project));
-                            navigate(`/MainPage/project/${project.id}`);
+                            navigate(`/project/${project.id}`);
                         }}
                     />
                 </CardWrapper>

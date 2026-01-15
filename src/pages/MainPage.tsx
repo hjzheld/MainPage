@@ -49,7 +49,7 @@ const MainPage = () => {
                     duration: 1.2,
                     scale: { type: "spring", visualDuration: 0.8, bounce: 0.5 },
                 }}>
-                    <Btn.GradientBtn onClick={() => navigate(`/MainPage/project`)}>
+                    <Btn.GradientBtn onClick={() => navigate(`/project`)}>
                         프로젝트 페이지 ▶
                     </Btn.GradientBtn>
                     <Btn.GradientBtn onClick={() => window.open("https://github.com/hjzheld", "_blank")}>

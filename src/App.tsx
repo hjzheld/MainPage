@@ -1,12 +1,21 @@
 import '@/assets/scss/index.scss';
+import Header from "@/components/header/Header"
+import Footer from "@/components/footer/Footer"
 import MainPage from "@/pages/MainPage"
 import Detail from "@/pages/portfolio/DetailPage"
 import PortfolioPage from "@/pages/portfolio/PortfolioPage"
-import Header from "@/components/header/Header"
-import Footer from "@/components/footer/Footer"
+import NotFoundPage from "@/pages/NotFoundPage"
+
 
 import { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation  } from "react-router-dom";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation
+} from "react-router-dom";
 
 // interface ThemeTpe {
 //     theme: string,
@@ -46,17 +55,19 @@ function AppContent() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/MainPage/home" replace />} />
-          <Route path="/MainPage/" element={<Navigate to="/MainPage/home" replace />} />
-          <Route path="/MainPage/home" element={<MainPage />} />
-          <Route path="/MainPage/project" element={<PortfolioPage />} />
-          <Route path="/MainPage/project/:id" element={<Detail />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<MainPage />} />
+          <Route path="/project" element={<PortfolioPage />} />
+          <Route path="/project/:id" element={<Detail />} />
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
     </>
   );
 }
+
 
 function App() {
 //     const [isDarkMode, setIsDarkMode] = useState('dark')
@@ -70,9 +81,9 @@ function App() {
     // })
 
     return (
-        <Router>
-            <AppContent />
-        </Router>
+      <BrowserRouter basename="/MainPage">
+        <AppContent />
+      </BrowserRouter>
     )
 }
 
