@@ -42,11 +42,11 @@ const Footer = () => {
             <FooterContent>
             <FooterLogo />
                 <FooterIcon>
-                    <img src={emailSvg} alt="email" />
+                    <img src={emailSvg} alt="email" loading="lazy" />
                     {isSmallMobile ? <p>010-8927-2421</p> : <p>연락처: 010-8927-2421</p>}
                 </FooterIcon>
                 <FooterIcon>
-                    <img src={phoneSvg} alt="phone" />
+                    <img src={phoneSvg} alt="phone" loading="lazy" />
                     {isSmallMobile ? <p>dusen380@gmail.com</p> : <p>이메일: dusen380@gmail.com</p>}
                 </FooterIcon>
                 </FooterContent>

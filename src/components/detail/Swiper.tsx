@@ -133,6 +133,7 @@ const SwiperImage = ({ images, onClick }: ImageProps) => {
               <Zoom>
                 <img
                   src={img.src}
+                  loading="lazy"
                   alt="project image"
                   onClick={onClick}
                 />

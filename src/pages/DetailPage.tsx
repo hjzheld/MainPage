@@ -59,6 +59,7 @@ const DetailPage = () => {
                         {
                             project.detail.image.length == 1 ? 
                             <motion.img 
+                            loading="lazy"
                             src={project.detail.image[0].src} 
                             alt="프로젝트 이미지"
                             onClick={() => setIsImageOpen(true)}

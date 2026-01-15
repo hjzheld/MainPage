@@ -177,6 +177,7 @@ const DetailPage = () => {
                             project.detail.image.length == 1 ? 
                             <motion.img 
                             src={project.detail.image[0].src} 
+                            loading="lazy"
                             alt="프로젝트 이미지"
                             onClick={() => setIsImageOpen(true)}
                             whileHover={{ scale: 1.05 }}
