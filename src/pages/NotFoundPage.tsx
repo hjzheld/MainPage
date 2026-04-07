@@ -28,7 +28,7 @@ const NotFound = () => {
     return (
         <NotFoundPageWrap>
             <img src={notFoundImg} alt="404 Icon" loading="lazy" />
-            <Btn.GradientBtn onClick={() => navigate(`/home`)}>
+            <Btn.GradientBtn onClick={() => navigate(`/`)}>
                 메인 페이지 ▶
             </Btn.GradientBtn> 
         </NotFoundPageWrap>

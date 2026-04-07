@@ -55,8 +55,7 @@ function AppContent() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="/project" element={<PortfolioPage />} />
           <Route path="/project/:id" element={<Detail />} />
           <Route path="/404" element={<NotFoundPage />} />

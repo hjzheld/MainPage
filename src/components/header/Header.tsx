@@ -110,19 +110,19 @@ const Header = ({}: HeaderProps = {}) => {
   const [open, setOpen] = useState(false);
 
   const menuItems = [
-    { path: '/home', label: '홈' },
+    { path: '/', label: '홈' },
     { path: '/project', label: '프로젝트' },
   ];
 
   const isActive = (path: string) =>
-    path === '/home'
-      ? location.pathname === '/home'
+    path === '/'
+      ? location.pathname === '/'
       : location.pathname.startsWith(path);
 
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <Logo onClick={() => navigate('/home')} />
+        <Logo onClick={() => navigate('/')} />
 
         <MenuButton onClick={() => setOpen(!open)}>
           <MenuIcon />
