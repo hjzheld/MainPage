@@ -16,6 +16,8 @@ import {
   useLocation
 } from "react-router-dom";
 
+import RouteChangeTracker from "./components/RouteChangeTracker";
+
 // interface ThemeTpe {
 //     theme: string,
 //     setTheme: () => void
@@ -51,6 +53,7 @@ function AppContent() {
   return (
     <>
       <ScrollToTop />
+      <RouteChangeTracker />
       <Header />
       <main>
         <Routes>
