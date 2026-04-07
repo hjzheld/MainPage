@@ -13,7 +13,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate,
   useLocation
 } from "react-router-dom";
 
