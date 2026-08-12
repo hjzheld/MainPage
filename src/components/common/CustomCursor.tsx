@@ -26,6 +26,8 @@ const CursorCircle = styled.div<{ $hover: boolean }>`
 `;
 
 const CustomCursor = () => {
+  const [isMouseDevice, setIsMouseDevice] = useState(false);
+
   const [mouse, setMouse] = useState({
     x: 0,
     y: 0,
@@ -38,7 +40,36 @@ const CustomCursor = () => {
 
   const [isHover, setIsHover] = useState(false);
 
+  // ==========================================
+  // 마우스 / 트랙패드 환경인지 확인
+  // ==========================================
   useEffect(() => {
+    const mediaQuery = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    );
+
+    const handleChange = () => {
+      setIsMouseDevice(mediaQuery.matches);
+    };
+
+    handleChange();
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener(
+        "change",
+        handleChange
+      );
+    };
+  }, []);
+
+  // ==========================================
+  // 마우스 위치
+  // ==========================================
+  useEffect(() => {
+    if (!isMouseDevice) return;
+
     const moveMouse = (e: MouseEvent) => {
       setMouse({
         x: e.clientX,
@@ -49,20 +80,34 @@ const CustomCursor = () => {
     window.addEventListener("mousemove", moveMouse);
 
     return () => {
-      window.removeEventListener("mousemove", moveMouse);
+      window.removeEventListener(
+        "mousemove",
+        moveMouse
+      );
     };
-  }, []);
+  }, [isMouseDevice]);
 
+  // ==========================================
+  // 원이 마우스를 부드럽게 따라오게
+  // ==========================================
   useEffect(() => {
+    if (!isMouseDevice) return;
+
     let animationFrame: number;
 
     const animate = () => {
       setCircle((prev) => ({
-        x: prev.x + (mouse.x - prev.x) * 0.15,
-        y: prev.y + (mouse.y - prev.y) * 0.15,
+        x:
+          prev.x +
+          (mouse.x - prev.x) * 0.15,
+
+        y:
+          prev.y +
+          (mouse.y - prev.y) * 0.15,
       }));
 
-      animationFrame = requestAnimationFrame(animate);
+      animationFrame =
+        requestAnimationFrame(animate);
     };
 
     animate();
@@ -70,9 +115,14 @@ const CustomCursor = () => {
     return () => {
       cancelAnimationFrame(animationFrame);
     };
-  }, [mouse]);
+  }, [mouse, isMouseDevice]);
 
+  // ==========================================
+  // 버튼 / 링크 hover
+  // ==========================================
   useEffect(() => {
+    if (!isMouseDevice) return;
+
     const handleOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
 
@@ -87,23 +137,34 @@ const CustomCursor = () => {
       }
     };
 
-    document.addEventListener("mouseover", handleOver);
+    document.addEventListener(
+      "mouseover",
+      handleOver
+    );
 
     return () => {
-      document.removeEventListener("mouseover", handleOver);
+      document.removeEventListener(
+        "mouseover",
+        handleOver
+      );
     };
-  }, []);
+  }, [isMouseDevice]);
+
+  // ==========================================
+  // 모바일 / 터치 환경이면 아예 렌더링 X
+  // ==========================================
+  if (!isMouseDevice) {
+    return null;
+  }
 
   return (
-    <>
-      <CursorCircle
-        $hover={isHover}
-        style={{
-          left: circle.x,
-          top: circle.y,
-        }}
-      />
-    </>
+    <CursorCircle
+      $hover={isHover}
+      style={{
+        left: circle.x,
+        top: circle.y,
+      }}
+    />
   );
 };
 

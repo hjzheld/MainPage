@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const MouseGlow = styled.div`
@@ -9,15 +9,36 @@ const MouseGlow = styled.div`
   z-index: 0;
 
   background: radial-gradient(
-    380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(118, 164, 218, 0.13),
-    rgba(118, 164, 218, 0.05) 35%,
-    transparent 70%
+    500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(118, 164, 218, 0.12),
+    transparent 65%
   );
 `;
 
 const MouseBackground = () => {
+  const [isMouseDevice, setIsMouseDevice] = useState(false);
+
   useEffect(() => {
+    const mediaQuery = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    );
+
+    const handleChange = () => {
+      setIsMouseDevice(mediaQuery.matches);
+    };
+
+    handleChange();
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMouseDevice) return;
+
     const handleMouseMove = (event: MouseEvent) => {
       document.documentElement.style.setProperty(
         "--mouse-x",
@@ -38,7 +59,11 @@ const MouseBackground = () => {
         handleMouseMove
       );
     };
-  }, []);
+  }, [isMouseDevice]);
+
+  if (!isMouseDevice) {
+    return null;
+  }
 
   return <MouseGlow />;
 };
