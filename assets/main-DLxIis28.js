@@ -81,7 +81,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    cursor: pointer;
 `,F1=Q.svg`
     width: 40px;
     height: 40px;
@@ -98,8 +97,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   top: 0;
   z-index: 100;
   background-color: transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   padding: 1rem 2rem;
 
   @media (max-width: 768px) {
@@ -136,7 +133,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   color: ${({active:n})=>n?"var(--primary-color)":"var(--gray-100)"};
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0.5rem 1rem;
   position: relative;
 
@@ -161,7 +157,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   display: none;
   background: none;
   border: none;
-  cursor: pointer;
 
   @media (max-width: 768px) {
     display: block;
@@ -196,7 +191,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   color: ${({active:n})=>n?"var(--white-100)":"var(--gray-100)"};
   font-weight: 400;
   font-size: 1rem;
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
   
@@ -218,7 +212,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   }
 `,F3=({tab:n,active:a,onClick:l})=>w.jsx($3,{onClick:l,active:a,initial:{borderColor:a?"var(--primary-color)":"var(--gray-200)"},animate:{borderColor:a?"var(--primary-color)":"var(--gray-200)"},whileHover:{borderColor:"var(--primary-color)",scale:1.05,transition:{duration:.3}},whileTap:{scale:.95},children:n.title}),J3=Q($.button)`
   width: fit-content;
-  cursor: pointer;
   margin-top: 1rem;
   padding: 0.25rem 0.5rem;
   border-bottom: ${({active:n})=>n?"2px solid":"none"};
@@ -256,7 +249,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   color: var(--gray-100);
   font-weight: 400;
   font-size: 1rem;
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
   
@@ -283,7 +275,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   padding: 10px 30px;
   border-radius: 15px;
   border: 3px solid transparent;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #76a4da, #bebcd8, #76a4da);
@@ -408,7 +399,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     background: transparent;
     border: 2px solid rgba(118, 164, 218, 0.3);
     border-radius: 12px;
-    cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     margin-right: 1rem;
@@ -682,7 +672,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   font-weight: 500;
   color: var(--gray-100);
   text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s ease;
   word-break: break-all;
   overflow-wrap: break-word;
@@ -854,8 +843,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 
   background: rgba(114, 130, 151, 0.85);
 
-  cursor: pointer;
-
   transform: translateY(-50%);
 
   transition:
@@ -886,7 +873,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 
   &:disabled {
     opacity: 0.25;
-    cursor: default;
   }
 
   @media (max-width: 768px) {
@@ -951,9 +937,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   border-radius: 50%;
 
   background: rgba(114, 130, 151, 0.85);
-
-  cursor: pointer;
-
   transform: translateY(-50%);
 
   transition:
@@ -987,7 +970,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 
   &:disabled {
     opacity: 0.18;
-    cursor: default;
     pointer-events: none;
   }
 
@@ -1045,7 +1027,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   border-radius: 50%;
 
   background: rgba(0, 0, 0, 0.68);
-  cursor: pointer;
 
   /*
    * transform을 transition 대상에서 완전히 제외.
@@ -1125,7 +1106,6 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  cursor: pointer;
   transition: all 0.3s ease;
 
   h3 {
