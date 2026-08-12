@@ -13,8 +13,6 @@ const HeaderWrapper = styled.header`
   top: 0;
   z-index: 100;
   background-color: transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   padding: 1rem 2rem;
 
   @media (max-width: 768px) {
@@ -58,7 +56,6 @@ const NavItem = styled(motion.button)<{ active?: boolean }>`
   color: ${({ active }) => (active ? 'var(--primary-color)' : 'var(--gray-100)')};
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0.5rem 1rem;
   position: relative;
 
@@ -85,7 +82,6 @@ const MenuButton = styled.button`
   display: none;
   background: none;
   border: none;
-  cursor: pointer;
 
   @media (max-width: 768px) {
     display: block;

@@ -186,8 +186,6 @@ const PreviewNavButton = styled.button<{
 
   background: rgba(114, 130, 151, 0.85);
 
-  cursor: pointer;
-
   transform: translateY(-50%);
 
   transition:
@@ -221,7 +219,6 @@ const PreviewNavButton = styled.button<{
 
   &:disabled {
     opacity: 0.25;
-    cursor: default;
   }
 
   @media (max-width: 768px) {
@@ -302,9 +299,6 @@ const ModalNavButton = styled.button<{
   border-radius: 50%;
 
   background: rgba(114, 130, 151, 0.85);
-
-  cursor: pointer;
-
   transform: translateY(-50%);
 
   transition:
@@ -341,7 +335,6 @@ const ModalNavButton = styled.button<{
 
   &:disabled {
     opacity: 0.18;
-    cursor: default;
     pointer-events: none;
   }
 
@@ -406,7 +399,6 @@ const ModalCloseButton = styled.button`
   border-radius: 50%;
 
   background: rgba(0, 0, 0, 0.68);
-  cursor: pointer;
 
   /*
    * transform을 transition 대상에서 완전히 제외.

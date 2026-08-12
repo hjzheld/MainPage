@@ -5,7 +5,6 @@ const LogoContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    cursor: pointer;
 `;
 
 const LogoSvg = styled.svg`

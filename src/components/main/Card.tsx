@@ -26,7 +26,6 @@ const CardStyle = styled(motion.div)`
   background: var(--white-100);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  cursor: pointer; 
 \
   p {
     margin-top: 1rem;

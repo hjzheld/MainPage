@@ -45,7 +45,6 @@ const LinkButton = styled(motion.a)`
   font-weight: 500;
   color: var(--gray-100);
   text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s ease;
   word-break: break-all;
   overflow-wrap: break-word;

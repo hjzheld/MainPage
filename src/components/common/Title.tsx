@@ -17,7 +17,6 @@ const BackButton = styled(motion.button)`
     background: transparent;
     border: 2px solid rgba(118, 164, 218, 0.3);
     border-radius: 12px;
-    cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     margin-right: 1rem;

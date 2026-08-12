@@ -27,7 +27,6 @@ const CategoryBtnStyle = styled(motion.button)<{ active?: boolean }>`
   color: ${({ active }) => ( active? 'var(--white-100)' : 'var(--gray-100)')};
   font-weight: 400;
   font-size: 1rem;
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
   
@@ -79,7 +78,6 @@ interface SubBtnProps {
 
 const SubBtnStyle = styled(motion.button)<{ active?: boolean }>`
   width: fit-content;
-  cursor: pointer;
   margin-top: 1rem;
   padding: 0.25rem 0.5rem;
   border-bottom: ${({ active }) => ( active? '2px solid' : 'none')};
@@ -156,7 +154,6 @@ const CloseBtnStyle = styled(motion.button)`
   color: var(--gray-100);
   font-weight: 400;
   font-size: 1rem;
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
   
@@ -209,7 +206,6 @@ const GradientBtnWrapper = styled(motion.button)`
   padding: 10px 30px;
   border-radius: 15px;
   border: 3px solid transparent;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #76a4da, #bebcd8, #76a4da);

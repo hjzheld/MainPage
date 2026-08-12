@@ -36,7 +36,6 @@ a {
 button {
   background: none;
   border: none;
-  cursor: pointer;
   font: inherit;
 }
 
@@ -294,7 +293,6 @@ body {
       flex-shrink: 0;
 
       img {
-        cursor: pointer;
       }
 
       @media (max-width: 992px) {
@@ -371,10 +369,6 @@ body {
       @media (max-width: 480px) {
         gap: 0.5rem;
       }
-    }
-
-    .go-page {
-      cursor: pointer;
     }
 
     .detail-sub-content {

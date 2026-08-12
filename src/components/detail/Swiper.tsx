@@ -24,7 +24,6 @@ const NavButton = styled(motion.button)<{ direction: 'prev' | 'next' }>`
   ${({ direction }) => direction === 'prev' ? 'left: 10px;' : 'right: 10px;'}
   transform: translateY(-50%);
   z-index: 10;
-  cursor: pointer;
   width: 44px;
   height: 44px;
   border-radius: 50%;

@@ -29,7 +29,6 @@ const CardStyle = styled(motion.div)`
 
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  cursor: pointer;
   transition: all 0.3s ease;
 
   h3 {
