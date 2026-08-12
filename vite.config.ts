@@ -9,13 +9,34 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 export default defineConfig({
-  base: '/MainPage/',
-  plugins: [react()],
+  base: '/portfolio/',
+
+  plugins: [
+    react(),
+
+    {
+      name: 'redirect-portfolio',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === '/portfolio') {
+            res.statusCode = 302
+            res.setHeader('Location', '/portfolio/')
+            res.end()
+            return
+          }
+
+          next()
+        })
+      }
+    }
+  ],
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
   },
+
   build: {
     rollupOptions: {
       input: {

@@ -4,6 +4,7 @@ import hojinMain from '@/assets/images/detail/hojin_main.png';
 import hojinDetail from '@/assets/images/detail/hojin_detail.png';
 import petmung from '@/assets/images/detail/petmung.png';
 import portfolio from '@/assets/images/detail/portfolio.png';
+import invitation from '@/assets/images/detail/invitation.png';
 import hojinVideo from '/public/hojin_video.mp4';
 
 
@@ -50,7 +51,7 @@ const projects: Projects[] = [
         detail: {
             github: 'https://github.com/Pet-Mung/Back',
             blog: [],
-            site: 'https://typefront.vercel.app/',
+            // site: 'https://typefront.vercel.app/',
             content:  `
             프론트엔드 1명, 백엔드 1명으로 진행한 프로젝트로 저는 백엔드를 맡아 진행했습니다.
             <br/> FastAPI 를 활용하여 로그인, 유저/판매자 구분 회원가입, 상품 crud, 장바구니 및 결제처리를 구현한 사이트입니다.
@@ -102,7 +103,7 @@ const projects: Projects[] = [
         subTab: 'react',
         tags: ['React', 'Vite', 'TypeScript'],
         detail: {
-            github: 'https://github.com/hjzheld/MainPage',
+            github: 'https://github.com/hjzheld/portfolio',
             blog: [],
             content: `
             리액트로 만든 프로젝트입니다.
@@ -116,6 +117,35 @@ const projects: Projects[] = [
             stack: {
                 front: ['React', 'Vite', 'TypeScript'],
                 build: ['Github']
+            }
+        }
+    },
+    {
+        id: 5,
+        title: '팔순잔치 초대장',
+        content: '모바일 환경에 최적화된 팔순잔치 초대장 웹사이트',
+        mainTab: 'front',
+        subTab: 'vue',
+        tags: ['Vue', 'Vite', 'JavaScript'],
+        detail: {
+            site: 'https://hjzheld.github.io/birthday/',
+            github: 'https://github.com/hjzheld/birthday',
+            blog: [],
+            content: `
+            팔순잔치를 위해 직접 기획하고 제작한 모바일 초대장 웹사이트입니다.
+            <br/> 행사 소개, 초대글, 날짜 및 시간, 장소와 주차 정보를 한 페이지에서 확인할 수 있도록 구성했습니다.
+            <br/> 배경음악을 적용하고 사용자가 직접 음악을 재생하거나 중지할 수 있도록 기능을 구현했습니다.
+            <br/> Intersection Observer를 활용하여 스크롤 위치에 따라 콘텐츠가 자연스럽게 나타나는 애니메이션을 구현했습니다.
+            <br/> 네이버 지도와 카카오 지도를 연동하여 행사 장소와 주차장까지 바로 길찾기가 가능하도록 구현했습니다.
+            <br/> 모바일 환경을 중심으로 반응형 UI를 구성하여 다양한 화면 크기에서도 자연스럽게 표시되도록 작업했습니다.
+            <br/> GitHub Actions 기반 CI/CD를 구성하여 main 브랜치에 Push하면 자동으로 빌드 후 GitHub Pages에 배포되도록 구현했습니다.
+            `,
+            image: [
+            { type: 'image', src: invitation }
+            ],
+            stack: {
+            front: ['Vue', 'Vite', 'JavaScript', 'CSS3'],
+            build: ['GitHub Actions', 'GitHub Pages']
             }
         }
     }

@@ -4,7 +4,7 @@ import {FooterLogo} from '../header/Logo';
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 import emailSvg from "@/assets/images/common/email.svg";
-import phoneSvg from "@/assets/images/common/phone.svg";
+// import phoneSvg from "@/assets/images/common/phone.svg";
 
 const FooterWrapper = styled.footer`
     width: 100%;
@@ -43,11 +43,7 @@ const Footer = () => {
             <FooterLogo />
                 <FooterIcon>
                     <img src={emailSvg} alt="email" loading="lazy" />
-                    {isSmallMobile ? <p>010-8927-2421</p> : <p>연락처: 010-8927-2421</p>}
-                </FooterIcon>
-                <FooterIcon>
-                    <img src={phoneSvg} alt="phone" loading="lazy" />
-                    {isSmallMobile ? <p>dusen380@gmail.com</p> : <p>이메일: dusen380@gmail.com</p>}
+                   {isSmallMobile ? <p>dusen380@gmail.com</p> : <p>이메일: dusen380@gmail.com</p>}
                 </FooterIcon>
                 </FooterContent>
             

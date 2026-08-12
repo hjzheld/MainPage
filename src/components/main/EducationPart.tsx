@@ -4,10 +4,11 @@ import { SubTitle } from '@/components/common/Title';
 
 const CardsGrid = styled(motion.div)`
     display: flex;
+    justify-content: center;
     gap: 3rem;
     width: 100%;
     max-width: 1000px;
-    margin: 3rem 0;
+    margin: 3rem auto;
     padding: 0 2rem;
     
     @media (max-width: 768px) {

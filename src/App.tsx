@@ -4,6 +4,7 @@ import Footer from "@/components/footer/Footer"
 import MainPage from "@/pages/MainPage"
 import Detail from "@/pages/portfolio/DetailPage"
 import PortfolioPage from "@/pages/portfolio/PortfolioPage"
+import { PersonalHistory } from "@/pages/PersonalHistory"
 import NotFoundPage from "@/pages/NotFoundPage"
 
 
@@ -60,6 +61,7 @@ function AppContent() {
           <Route path="/" element={<MainPage />} />
           <Route path="/project" element={<PortfolioPage />} />
           <Route path="/project/:id" element={<Detail />} />
+          <Route path="/personal" element={<PersonalHistory />} />
           <Route path="/404" element={<NotFoundPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -71,18 +73,8 @@ function AppContent() {
 
 
 function App() {
-//     const [isDarkMode, setIsDarkMode] = useState('dark')
-
-//   const setTheme = () => {
-//     setIsDarkMode(!isDarkMode)
-//   }
-
-    // useEffect(() => {
-    //     document.documentElement.lang = 'ko'
-    // })
-
     return (
-      <BrowserRouter basename="/MainPage">
+      <BrowserRouter basename="/portfolio/">
         <AppContent />
       </BrowserRouter>
     )

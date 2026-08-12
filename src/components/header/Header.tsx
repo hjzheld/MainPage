@@ -111,6 +111,7 @@ const Header = ({}: HeaderProps = {}) => {
 
   const menuItems = [
     { path: '/', label: '홈' },
+    { path: '/personal', label: '경력' },
     { path: '/project', label: '프로젝트' },
   ];
 
