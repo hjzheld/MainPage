@@ -6,7 +6,8 @@ import Detail from "@/pages/portfolio/DetailPage"
 import PortfolioPage from "@/pages/portfolio/PortfolioPage"
 import { PersonalHistory } from "@/pages/PersonalHistory"
 import NotFoundPage from "@/pages/NotFoundPage"
-
+import CustomCursor from "@/components/common/CustomCursor";
+import MouseBackground from "@/components/common/MouseBackground";
 
 import { useEffect } from 'react'
 
@@ -53,6 +54,8 @@ function ScrollToTop() {
 function AppContent() {
   return (
     <>
+      <CustomCursor />
+      <MouseBackground />
       <ScrollToTop />
       <RouteChangeTracker />
       <Header />
