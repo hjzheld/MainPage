@@ -173,26 +173,26 @@ const PortfolioPage = () => {
   // ==========================================
   // 프로젝트 필터
   // ==========================================
-  const filteredList = projects.filter(
-    (project) => {
-      if (selectedTab === "all") {
-        return true;
-      }
-
-      if (selectedTab !== project.mainTab) {
-        return false;
-      }
-
-      if (
-        selectedSub &&
-        selectedSub !== project.subTab
-      ) {
-        return false;
-      }
-
+ const filteredList = [...projects]
+  .sort((a, b) => b.id - a.id)
+  .filter((project) => {
+    if (selectedTab === "all") {
       return true;
-    },
-  );
+    }
+
+    if (selectedTab !== project.mainTab) {
+      return false;
+    }
+
+    if (
+      selectedSub &&
+      selectedSub !== project.subTab
+    ) {
+      return false;
+    }
+
+    return true;
+  });
 
   const selectedCategory = categories.find(
     (category) =>
