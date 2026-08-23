@@ -2338,9 +2338,7 @@ const MainPage = () => {
             </SectionTitleWrap>
 
             <CompactText>
-              현재까지의 학력과
-              개발자로 성장해온
-              과정을 정리했습니다.
+              현재까지의 학력입니다.
             </CompactText>
           </CompactHeader>
 
@@ -2401,7 +2399,7 @@ const MainPage = () => {
                       }
                     >
                       <MagneticLabel className="mag-label">
-                        이력 보기 ▶
+                        경력 보기 ▶
                       </MagneticLabel>
                     </Btn.GradientBtn>
                   </MagneticTarget>
