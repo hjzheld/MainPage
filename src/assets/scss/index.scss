@@ -171,8 +171,31 @@ body {
   --sky-100: rgb(216, 224, 230);
   --sky-200: rgb(241, 248, 255);
 
+
+  --project-transition-base: #f5f7fa;
+  --project-transition-blue: #dce8f4;
+  --project-transition-lavender: #e7e5f0;
+  --project-transition-mist: #e3e8ed;
+
+  --project-transition-text: #687789;
+
+  
+
   // rgba
   --white-rgba: rgba(255, 255, 255, 0.1);
+  --project-transition-line: rgba(
+    118,
+    164,
+    218,
+    0.22
+  );
+
+  --project-transition-shadow: rgba(
+    75,
+    100,
+    130,
+    0.08
+  );
 
   --font-size-base: 16px;
 

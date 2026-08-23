@@ -8,6 +8,7 @@ import { PersonalHistory } from "@/pages/PersonalHistory"
 import NotFoundPage from "@/pages/NotFoundPage"
 import CustomCursor from "@/components/common/CustomCursor";
 import MouseBackground from "@/components/common/MouseBackground";
+import FloatingNav from "@/components/common/FloatingNav";
 
 import { useEffect } from 'react'
 
@@ -59,6 +60,7 @@ function AppContent() {
       <ScrollToTop />
       <RouteChangeTracker />
       <Header />
+      <FloatingNav />
       <main>
         <Routes>
           <Route path="/" element={<MainPage />} />

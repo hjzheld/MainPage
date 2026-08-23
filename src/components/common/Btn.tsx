@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { motion, AnimatePresence } from 'framer-motion';
+import type {
+  ReactNode,
+} from "react";
 
 interface SubCategory {
   title: string,
@@ -198,8 +201,9 @@ const CloseBtn = ({ onClick }: CloseBtnProps) => {
 
 // 그라데이션 텍스트 버튼
 interface GradientBtnProps {
-  children: string;
+  children: ReactNode;
   onClick?: () => void;
+  className?: string;
 }
 
 const GradientBtnWrapper = styled(motion.button)`
@@ -243,44 +247,51 @@ const GradientBtnText = styled(motion.span)`
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
-const GradientBtn = ({ children, onClick }: GradientBtnProps) => {
+const GradientBtn = ({
+  children,
+  onClick,
+  className,
+}: GradientBtnProps) => {
   return (
     <GradientBtnWrapper
+      className={className}
       onClick={onClick}
       animate={{
-        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+        backgroundPosition: [
+          "0% 50%",
+          "100% 50%",
+          "0% 50%",
+        ],
       }}
       transition={{
         duration: 3,
         repeat: Infinity,
-        ease: "linear"
+        ease: "linear",
       }}
-      style={{ backgroundPosition: '0% 50%' }}
+      style={{
+        backgroundPosition:
+          "0% 50%",
+      }}
       whileHover={{
         scale: 1.08,
         y: -2,
-        boxShadow: "0 12px 24px rgba(118, 164, 218, 0.7)",
-        transition: { 
+        boxShadow:
+          "0 12px 24px rgba(118, 164, 218, 0.7)",
+        transition: {
           duration: 0.3,
-          ease: "easeOut"
-        }
+          ease: "easeOut",
+        },
       }}
       whileTap={{
         scale: 0.95,
-        y: 0
+        y: 0,
       }}
     >
-      <GradientBtnText
-        whileHover={{
-          scale: 1.05,
-          textShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-          transition: { duration: 0.2 }
-        }}
-      >
+      <GradientBtnText>
         {children}
       </GradientBtnText>
     </GradientBtnWrapper>
   );
-}
+};
 
 export default { CategoryBtn, SubCategory, CloseBtn, GradientBtn };
