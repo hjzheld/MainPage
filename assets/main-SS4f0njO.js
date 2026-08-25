@@ -2687,8 +2687,10 @@ Please change the parent <Route path="${R}"> to <Route path="${R==="/"?"*":`${R}
   position: relative;
 
   width: 100%;
+  min-height: 100vh;
 
-  overflow-x: hidden;
+  overflow: visible;
+  overflow-x: clip;
 `,tk=P.div`
     position: relative;
 
