@@ -55,7 +55,6 @@ const Page = styled.div`
   min-height: 100vh;
 
   overflow: visible;
-  overflow-x: clip;
 `;
 
 /* =========================================================
@@ -909,6 +908,22 @@ const PortfolioPage =
           false;
 
         /* =================================================
+           INTRO 동안 페이지 스크롤 잠금
+        ================================================= */
+
+        const prevBodyOverflow =
+          document.body.style.overflow;
+
+        const prevHtmlOverflow =
+          document.documentElement.style.overflow;
+
+        document.body.style.overflow =
+          "hidden";
+
+        document.documentElement.style.overflow =
+          "hidden";
+
+        /* =================================================
            ACTUAL CONTENT INITIAL
         ================================================= */
 
@@ -1418,11 +1433,23 @@ const PortfolioPage =
           () => {
             introDoneRef.current =
               true;
+
+            document.body.style.overflow =
+              prevBodyOverflow;
+
+            document.documentElement.style.overflow =
+              prevHtmlOverflow;
           },
         );
 
         return () => {
           tl.kill();
+
+          document.body.style.overflow =
+            prevBodyOverflow;
+
+          document.documentElement.style.overflow =
+            prevHtmlOverflow;
         };
       },
 
