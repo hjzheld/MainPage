@@ -852,7 +852,7 @@ const BottomMessage = styled.div`
 const summaryStats = [
   ["EXPERIENCE", "2+ Years"],
   ["MAIN ROLE", "Frontend"],
-  ["EXPERIENCE", "Fullstack"],
+  ["SCOPE", "Full-cycle"],
   ["TEAM", "Lead · QA"],
 ];
 
@@ -906,15 +906,22 @@ const coreCompetencies = [
     description:
       "프론트엔드 업무 분배·일정 조율·지연 이슈 대응을 진행하고, 기능 오류와 예외 상황을 직접 확인하며 자체 QA까지 수행합니다.",
   },
+  {
+    name: "Problem Solving & Ownership",
+    description:
+      "문제가 발생했을 때 화면 코드에 한정하지 않고 상태 관리·라우팅·인증·API·데이터 흐름·렌더링 및 개발 환경까지 범위를 넓혀 원인을 추적합니다. 병목과 기능 책임을 구분해 적절한 해결 방법을 선택하고, 필요한 경우 공통 구조 개선과 성능 최적화까지 연결합니다.",
+  },
 ];
 
 const careerSummaryBullets = [
   "Vue.js·Nuxt.js 기반 사용자 및 관리자 페이지 개발",
+  "신규 기능 개발 시 상태 관리·라우팅·API 흐름까지 고려해 기능 구조 설계",
   "신규 프로젝트 초기 구조, 인증·라우팅·공통 컴포넌트 설계",
   "결제·구독·할인·사용자 권한 및 접근 제어 로직 구현",
   "REST API·WebSocket 연동 및 금융 데이터 시각화",
   "외주·운영 서비스 인수, 리팩토링, 컨버팅 및 전면 리뉴얼",
   "별도 퍼블리셔 없이 Figma 기반 UI 직접 구현",
+  "사용자 로딩 성능과 개발 환경의 병목을 구분해 성능·빌드 환경 개선",
   "Docker·Nginx 기반 빌드·배포와 운영 환경 대응",
   "팀 업무 분배·일정 관리·오류 분석·자체 QA",
 ];
@@ -1075,15 +1082,23 @@ const supportingExperiences = [
   {
     key: "performance",
     eyebrow: "PERFORMANCE & OPTIMIZATION",
-    title: "사용자 체감 성능과 개발 환경을 함께 개선",
-    text: "페이지 로딩과 개발 생산성을 구분해 필요한 영역의 부담을 줄이는 방향으로 최적화했습니다.",
+    title: "사용자 로딩 성능과 개발 환경을 함께 최적화",
+    text: "서비스 이용 중 발생하는 초기 로딩 부담과 개발 과정에서의 빌드·파일 감시 비용을 구분해 원인을 확인하고, 사용자 체감 성능과 개발 생산성을 각각 개선했습니다.",
     bullets: [
-      "초기 화면에 필요한 핵심 이미지는 우선 로드하고 비필수 이미지는 Lazy Loading 적용",
-      "CRA 기반 프로젝트를 Vite로 전환해 개발 서버 구동과 HMR 환경 개선",
-      "node_modules·.git·빌드 산출물 등 불필요한 파일 감시 범위를 제외해 개발 리소스 사용 감소",
-      "Production build에서 불필요한 console 코드를 제거해 운영 빌드 정리",
+      "초기 화면 렌더링에 필요한 핵심 이미지는 우선 로드하고, 즉시 필요하지 않은 이미지는 Lazy Loading으로 분리해 초기 로딩 부담 감소",
+      "CRA 기반 프로젝트를 Vite로 전환해 개발 서버 구동과 HMR 환경을 개선하고 반복 개발 시 발생하는 대기 시간 감소",
+      "node_modules·.git·빌드 산출물 등 개발에 불필요한 경로를 파일 감시 대상에서 제외해 개발 환경의 리소스 사용 감소",
+      "Production Build에서 불필요한 console 코드를 제거해 운영 빌드에 개발용 로그가 포함되지 않도록 정리",
+      "단순히 최적화 기법을 적용하는 데 그치지 않고 사용자 로딩과 개발 환경의 병목을 구분한 뒤 각 문제에 맞는 개선 방법 적용",
     ],
-    tags: ["Lazy Loading", "Vite", "HMR", "Build", "Optimization"],
+    tags: [
+      "Lazy Loading",
+      "Vite",
+      "HMR",
+      "Build Optimization",
+      "Performance",
+      "Troubleshooting",
+    ],
   },
   {
     key: "qa",
@@ -1378,9 +1393,9 @@ export const PersonalHistory = () => {
           </HeroTitle>
 
           <HeroDescription className="career-description">
-            백엔드 개발자로 시작해 프론트엔드로 영역을 확장했고, 현재는 Vue.js·Nuxt.js 기반
-            서비스 개발을 중심으로 <strong>구조 설계, 인증·결제·권한, 데이터 연동, 리팩토링, QA와 팀 협업</strong>까지
-            함께 경험하고 있습니다.
+            백엔드 개발자로 시작해 프론트엔드로 영역을 확장했고, 현재는 Vue.js·Nuxt.js 기반 서비스 개발을 중심으로 일하고 있습니다.
+            단순 화면 구현에 그치지 않고 요구사항과 데이터 흐름을 분석해 <strong>라우팅·인증·상태 관리·API 연동 구조를 설계</strong>하며,
+            결제·권한과 같은 비즈니스 로직부터 리팩토링·오류 분석·QA까지 서비스 전체 흐름을 기준으로 문제를 해결합니다.
           </HeroDescription>
 
           <SummaryGrid>
@@ -1462,9 +1477,10 @@ export const PersonalHistory = () => {
             <CareerSummaryBody>
               <div>
                 <CareerSummaryLead>
-                  백엔드 개발자로 입사한 뒤 프론트엔드 인력 부족을 계기로 Vue.js를 학습해 역할을 확장했습니다.
-                  이후 사용자·관리자 서비스, 결제·구독·권한, 차트, WebView, 운영 서비스 리뉴얼까지 프론트엔드를 주 업무로 담당하고 있으며,
-                  필요한 경우 백엔드와 운영 환경까지 함께 확인하고 있습니다.
+                  백엔드 개발자로 입사한 뒤 프론트엔드로 역할을 확장했으며, 현재는 Vue.js·Nuxt.js 기반 서비스의 프론트엔드를 주 업무로 담당하고 있습니다.
+                  사용자·관리자 화면 구현뿐 아니라 프로젝트 초기 구조, 인증·라우팅·상태 관리·API 연동 방식과 공통 컴포넌트의 책임을 설계하며,
+                  결제·구독·권한처럼 여러 상태가 연결되는 비즈니스 로직도 함께 구현합니다. 운영 중 문제가 발생하면 화면 코드에 한정하지 않고
+                  API·데이터·백엔드 흐름까지 확인해 원인을 추적하며, 필요한 경우 구조 개선과 QA까지 이어서 처리합니다.
                 </CareerSummaryLead>
                 <BulletList>
                   {careerSummaryBullets.map((item) => (
@@ -1649,11 +1665,11 @@ export const PersonalHistory = () => {
         </Section>
 
         <BottomMessage>
-          <h2>프론트엔드를 중심으로, 서비스 전체 흐름까지 봅니다.</h2>
+          <h2>구현보다 한 단계 더, 문제의 구조와 끝까지 연결되는 흐름을 봅니다.</h2>
           <p>
-            화면을 구현하는 것에서 끝나지 않고 데이터가 어디에서 오고, 사용자 상태와 서비스 정책이 어떻게 연결되며,
-            운영 이후 어떤 부분을 다시 개선해야 하는지까지 확인하는 개발을 중요하게 생각합니다. 새로운 환경에서도 필요한 영역을 빠르게 학습하고
-            실제 서비스 결과로 연결하는 개발자가 되고자 합니다.
+            주어진 화면을 구현하는 데 그치지 않고 기능이 서비스 안에서 어떻게 동작해야 하는지 판단해 구조를 설계하고, 문제가 발생하면
+            상태 관리·라우팅·API·데이터 흐름과 운영 환경까지 범위를 넓혀 원인을 추적합니다. 필요한 경우 공통 구조 개선과 성능 최적화, QA까지
+            연결해 같은 문제가 반복되지 않도록 해결하는 개발을 중요하게 생각합니다.
           </p>
         </BottomMessage>
       </Inner>
